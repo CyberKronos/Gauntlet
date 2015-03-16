@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+.body {
+  min-height: 100%;
+  width: 1000px;
+  background-color: #323a45;
+  margin: 10px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+header {
+  height: 100px;
+  background-color: #ce554e;
+  padding-top: 20px;
+  text-align: center;
+}
+header .logout {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  color: white;
+  text-decoration: none;
+  text-align: right;
+  margin-left: 310px;
+}
+header .challenge {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 40px;
+  background-color: #df6a69;
+  width: 150px;
+  height: 40px;
+  border: 0;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: -1px 0px 0 rgba(0, 0, 0, 0.35);
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 5px solid #ce554e;
+}
+header .logo {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100px;
+  margin-right: 310px;
+  /*border: 1px black solid;*/
+
+  text-align: left;
+  vertical-align: middle;
+}
+header .logout {
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+}
+header .logout:hover {
+  text-decoration: underline;
+}
+.content-nav {
+  border-bottom: 1px solid black;
+  height: 50px;
+  text-align: right;
+  background-color: #212226;
+}
+.content-nav li {
+  display: inline-block;
+}
+.content-nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 50px;
+  width: 130px;
+  line-height: 50px;
+  text-align: center;
+}
+.content-nav a:hover {
+  background-color: white;
+  color: black;
+}
+.profile-feed {
+  display: inline-block;
+  vertical-align: top;
+  width: 730px;
+}
+.profile-feed .feed-item-header {
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+.feed {
+  background-color: #2c333d;
+  padding: 10px;
+  margin: 20px;
+}
+.feed > li {
+  margin: 20px 0 ;
+  position: relative;
+}
+.feed .picture {
+  width: 140px;
+  height: 140px;
+  margin: 0px;
+  padding-top: 9px;
+  text-align: center;
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+}
+.feed .picture.from {
+  background-color: white;
+  left: 10px;
+}
+.feed .picture.from img {
+  width: 120px;
+  height: 120px;
+}
+.feed .picture.to {
+  right: 10px;
+  background-color: white;
+}
+.feed .picture.to img {
+  width: 120px;
+  height: 120px;
+}
+.feed .item-info {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  margin: 0 auto;
+  width: 400px;
+  color: black;
+  position: relative;
+  top: 5px;
+  z-index: 100;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #dedede;
+}
+.feed .item-info .challenge-name {
+  background-color: #e6e6e6;
+  padding: 10px 0 10px 0;
+  color: black;
+  border-bottom: 3px solid #dedede;
+}
+.feed .item-info .date {
+  padding: 0 0 10px 0;
+  font-size: 12px;
+  color: #8b8b8b;
+}
+.feed .item-info .info {
+  padding: 10px 0 10px 0;
+}
+.feed .item-info .accept,
+.feed .item-info .decline,
+.feed .item-info .winner-cher,
+.feed .item-info .winner-chee {
+  display: inline-block;
+  background-color: #df6a69;
+  width: 150px;
+  height: 40px;
+  border: 0;
+  line-height: 40px;
+  text-decoration: none;
+  position: relative;
+  border-radius: 2px;
+  text-shadow: -1px 0px 0 rgba(0, 0, 0, 0.35);
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 5px solid #ce554e;
+}
+.feed .comments-container {
+  width: 400px;
+  margin: 0 auto;
+}
+.feed .comments-container .comments {
+  clear: both;
+  text-align: center;
+}
+.feed .comments-container .comments:nth-child(2n+1) {
+  background-color: #ebebeb;
+}
+.feed .comments-container .comments .comment-send textarea {
+  border: 0;
+  width: 400px;
+  height: 35px;
+}
+.new-challenge .col-left {
+  width: 50%;
+  height: 250px;
+  float: left;
+}
+.new-challenge .col-right {
+  width: 50%;
+  height: 250px;
+  padding: 10px;
+  float: right;
+}
+.new-challenge .col-right h3 {
+  font-size: 10pt;
+}
+.new-challenge .col-right input {
+  width: 100%;
+  height: 30px;
+}
+.new-challenge .col-right textarea {
+  width: 100%;
+  height: 150px;
+}
+.new-challenge button {
+  display: block;
+  margin: 0 auto;
+  background-color: #df6a69;
+  width: 150px;
+  height: 40px;
+  border: 0;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: -1px 0px 0 rgba(0, 0, 0, 0.35);
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 5px solid #ce554e;
+}
+.profile-info {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 20px;
+  display: inline-block;
+}
+.profile-info .picture {
+  width: 200px;
+  height: 175px;
+}
+.profile-info .profile-stats {
+  font-size: 14px;
+}
+.profile-info .profile-stats li {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.profile-info .profile-stats li h3,
+.profile-info .profile-stats li div {
+  display: inline-block;
+}
+.profile-info .profile-stats .wins {
+  background-color: #627188;
+}
+.profile-info .profile-stats .loses {
+  background-color: #4d596f;
+}
+.profile-info .profile-stats .challenges {
+  background-color: #282f39;
+}
+.logo-login {
+  text-align: center;
+  margin-top: 200px;
+  padding-bottom: 40px;
+}
+.login .login-form {
+  background-color: #212226;
+  border-radius: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+.login .login-form .feedback {
+  display: none;
+}
+.login .login-form .login-button-container {
+  text-align: center;
+}
+.login .login-form .login-button-container .login-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #df6a69;
+  width: 150px;
+  height: 40px;
+  border: 0;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: -1px 0px 0 rgba(0, 0, 0, 0.35);
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 12px;
+  border-bottom: 5px solid #ce554e;
+  text-transform: uppercase;
+  text-align: center;
+}
+.login .login-form .login-field {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login .login-form .login-field .login-email,
+.login .login-form .login-field .login-password {
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.login .login-form .login-field input {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+}

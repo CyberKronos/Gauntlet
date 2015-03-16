@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title></title>
+	<link href="css/main.css" type="text/css" rel="stylesheet" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div class="body">
+		<header>
+			<div class="nav">
+				<div class="logo">
+					<img src="logo_dashboard.png">
+				</div>
+				<a class="challenge" href="#/new-challange">challenge</a>
+				<a class="logout" href="/api/users/logout">Logout</a>
+			</div>
+		</header>
+		<ul class="content-nav">
+			<li><a href='#/feed'>Newsfeed</a></li>
+			<li><a href='#/profile'>Profile</a></li>
+		</ul>
+		<div class="content"></div>
+	</div>
+	<!-- Libs -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/underscore.js"></script>
+	<script type="text/javascript" src="lib/backbone.js"></script>
+	<script type="text/javascript" src="lib/backbone.marionette.js"></script>
+	<script type="text/javascript" src="lib/handlebars.runtime.js"></script>
+	<script type="text/javascript" src="app/backbone.custom.js"></script>
+	<!-- App -->
+	<script type="text/javascript">
+		var App = new Backbone.Marionette.Application();
+	</script>
+	<script type="text/javascript" src="app/models/challange.js"></script>
+	<script type="text/javascript" src="app/models/user.js"></script>
+	<script type="text/javascript" src="app/collections/challanges.js"></script>
+	<script type="text/javascript" src="app/collections/users.js"></script>
+	<script type="text/javascript" src="app/templates/helpers.js"></script>
+	<script type="text/javascript" src="app/templates/template.js"></script>
+	<script type="text/javascript" src="app/views/feed.js"></script>
+	<script type="text/javascript" src="app/views/feed-item.js"></script>
+	<script type="text/javascript" src="app/views/new-challange.js"></script>
+	<script type="text/javascript" src="app/views/profile.js"></script>
+	<script type="text/javascript" src="app/router.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

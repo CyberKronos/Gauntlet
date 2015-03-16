@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+</head>
+<body class="body">
+
+    <div class="logo-login" >
+        <img src="logo_login.png">
+    </div>
+    <div class="login">
+        <form class="login-form" action="/api/users/auth" method="post">
+            <div class='feedback'>That email is already taken!</div>
+            <div class='login-field'>
+                <div class="login-name">Name:</div> 
+                <input type="text" name="username" id="username" />
+            </div>
+
+            <div class='login-field'>
+                <div class="login-name">Email:</div>  
+                <input type="email" name="email" id="email" />
+            </div>
+
+            <div class='login-field'>
+                <div class="login-name">Password:</div> 
+                <input type="password" name="password" id="password" />
+            </div>
+
+            <div class='login-field'>
+                <div class="login-name">Confirm Password:</div>  
+                <input type="password" name="password_confirm" id="password_confirm" />
+            </div>
+
+            <!--<input type="text" name="password_confirm" id="password_confirm" />-->
+            <div class="login-button-container">
+                <input class="login-button" type="submit" value="Sign In!" />
+            <div>
+        </form>
+    </div>
+
+<script>
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+        $.post('/api/users/signup', {
+            email: $('input[name=email]').val(),
+            password: $('input[name=password]').val(),
+            username: $('input[name=username]').val(),
+            password_confirm: $('input[name=password_confirm]').val()
+        }, 'json')
+                .done(function (data) {
+                    window.location.href = '../views/index.htm';
+                })
+                .error( function (data) {
+                    $('.feedback').show();
+                });
+    });
+</script>
+</body>
+</html>

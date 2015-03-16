@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="/css/main.css" type="text/css" rel="stylesheet" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+</head>
+<body class="body">
+
+<div class="logo-login" >
+    <img src="/logo_login.png">
+</div>
+<div class="login">
+    <form class="login-form" method="post" action="/api/users/auth">
+        <div class='feedback'>Username or password is incorrect!</div>
+        <div class='login-field'>
+            <div class="login-email">Email</div>
+            <input type="email" name="email" id="email" />
+        </div>
+        <div class='login-field'>
+            <div class="login-password">Password</div>
+            <input type="password" name="password" id="password" />
+        </div>
+        <!--<input type="text" name="password_confirm" id="password_confirm" />-->
+        <div class="login-button-container">
+            <input class="login-button" type="submit" value="Sign In!" />
+        <div>
+    </form>
+</div>
+
+<script type="text/javascript">
+	// Denis/Alex, this won't work for log in.
+	// Cookies are how the session state is passwd back and forth
+	// and this won't work.  I would suggest just leaving this behavior commented out.
+	// The only downside is that username / password errors would be suppressed, so make sure you get the username and password correct in the demo. =)
+//    $('form').on('submit', function (e) {
+//        e.preventDefault();
+//        $.post('/api/users/auth', {
+//            email: $('input[name=email]').val(),
+//            password: $('input[name=password]').val()
+//        }, 'json')
+//                .done(function (data) {
+////                    window.location.href = '/index/';
+//                })
+//                .error( function (data) {
+//                    $('.feedback').show();
+//                });
+//    });
+</script>
+</body>
+</html>

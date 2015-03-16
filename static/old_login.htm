@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+</head>
+<body class="body">
+
+	<div class="logo-login" >
+		<img src="logo_login.png">
+	</div>
+	<div class="login">
+	    <form class="login-form" action="/api/users/auth" method="post">
+	    	<div class='feedback'>Username or password is incorrect!</div>
+	    	<div class='login-field'>
+	    		<div class="login-email">Email</div> 
+	    		<input type="email" name="email" id="email" />
+	    	</div>
+	        <div class='login-field'>
+	        	<div class="login-password">Password</div>  
+	        	<input type="password" name="password" id="password" />
+	        </div>
+	        <!--<input type="text" name="password_confirm" id="password_confirm" />-->
+	        <div class="login-button-container">
+	        	<input class="login-button" type="submit" value="Sign In!" />
+	        <div>
+	    </form>
+   	</div>
+
+    <script>
+    	$('form').on('submit', function (e) {
+    		e.preventDefault();
+	    	$.post('/api/users/auth', {
+	    		email: $('input[name=email]').val(),
+	    		password: $('input[name=password]').val()
+	    	}, 'json')
+	    	.done(function (data) {
+	    		window.location.href = '../views/index.htm';
+	    	})
+	    	.error( function (data) {
+	    		$('.feedback').show();
+	    	});
+	    });
+    </script>
+</body>
+</html>
