@@ -2,7 +2,7 @@
 
 ## Description
 
-A hackathon project to foster competition. Probably unhealthy.
+A hackathon project that allows people to challenge each other to foster competition.
 
 ### Getting the NodeJS Server Running
 
